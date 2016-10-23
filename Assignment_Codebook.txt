@@ -1,0 +1,168 @@
+activitylabels: Contains the list of activity classified in the experiments. Links the class labels with their activity name.
+	1 WALKING
+	2 WALKING_UPSTAIRS
+	3 WALKING_DOWNSTAIRS
+	4 SITTING
+	5 STANDING
+	6 LAYING
+
+features: Contains the list of all features.
+	1 tBodyAcc-mean()-X
+	2 tBodyAcc-mean()-Y
+	...
+	
+	These signals were used to estimate variables of the feature vector for each pattern:  
+	'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+	tBodyAcc-XYZ
+	tGravityAcc-XYZ
+	tBodyAccJerk-XYZ
+	tBodyGyro-XYZ
+	tBodyGyroJerk-XYZ
+	tBodyAccMag
+	tGravityAccMag
+	tBodyAccJerkMag
+	tBodyGyroMag
+	tBodyGyroJerkMag
+	fBodyAcc-XYZ
+	fBodyAccJerk-XYZ
+	fBodyGyro-XYZ
+	fBodyAccMag
+	fBodyAccJerkMag
+	fBodyGyroMag
+	fBodyGyroJerkMag
+
+	The set of variables that were estimated from these signals are: 
+	
+	mean(): Mean value
+	std(): Standard deviation
+	mad(): Median absolute deviation 
+	max(): Largest value in array
+	min(): Smallest value in array
+	sma(): Signal magnitude area
+	energy(): Energy measure. Sum of the squares divided by the number of values. 
+	iqr(): Interquartile range 
+	entropy(): Signal entropy
+	arCoeff(): Auto regression coefficients with Burg order equal to 4
+	correlation(): correlation coefficient between two signals
+	maxInds(): index of the frequency component with largest magnitude
+	meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+	skewness(): skewness of the frequency domain signal 
+	kurtosis(): kurtosis of the frequency domain signal 
+	bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+	angle(): Angle between to vectors.
+	
+testactivity: Contains the activity code list of the observations of the test data set
+	.activityid : List of activity codes referred from activitylabels
+
+testsubject: Contains the subject on whom the observation was performed on the test dataset
+	.subjectid : List of subjects codes from 1 to 30
+	
+testset: Contains the X_test file dataset for test observations, columns matching the feature list
+
+testdata: Merged dataset of subject, activity and data set for test observations
+
+
+trainactivity: Contains the activity code list of the observations of the training data set
+	.activityid : List of activity codes referred from activitylabels
+	
+trainsubject: Contains the subject on whom the observation was performed on the training dataset
+	.subjectid : List of subjects codes from 1 to 30
+
+trainset: Contains the X_train file dataset for training observations, columns matching the feature list
+
+traindata: Merged dataset of subject, activity and data set for training observations
+
+mergeddata: Combined data for training and test observations
+
+meanstddata: Reduced required columns to subject, activity and mean/standard deviation related features
+
+aggrdata:
+		subjectid 		: Numbers ranging from 1 to 30 suggesting the subject of the experiment
+		activityname    : List of 6 activities WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING        
+		tbodyaccmeanx	: Average of tbodyaccmeanx per subject per activity                    
+		tbodyaccmeany	: Average of tbodyaccmeany per subject per activity
+		tbodyaccmeanz	: Average of tbodyaccmeanz per subject per activity
+		tbodyaccstdx    : Average of tbodyaccstdx per subject per activity              
+		tbodyaccstdy	: Average of tbodyaccstdy per subject per activity
+		tbodyaccstdz	: Average of tbodyaccstdz per subject per activity
+		tgravityaccmeanx: Average of tgravityaccmeanx per subject per activity                 
+		tgravityaccmeany: Average of tgravityaccmeany per subject per activity
+		tgravityaccmeanz: Average of tgravityaccmeanz per subject per activity
+		tgravityaccstdx	: Average of tgravityaccstdx per subject per activity
+		tgravityaccstdy	: Average of tgravityaccstdy per subject per activity
+		tgravityaccstdz : Average of tgravityaccstdz per subject per activity                  
+		tbodyaccjerkmeanx: Average of tbodyaccjerkmeanx per subject per activity
+		tbodyaccjerkmeany: Average of tbodyaccjerkmeany per subject per activity
+		tbodyaccjerkmeanz: Average of tbodyaccjerkmeanz per subject per activity
+		tbodyaccjerkstdx: Average of tbodyaccjerkstdx per subject per activity
+		tbodyaccjerkstdy: Average of tbodyaccjerkstdy per subject per activity
+		tbodyaccjerkstdz: Average of tbodyaccjerkstdz per subject per activity
+		tbodygyromeanx	: Average of tbodygyromeanx per subject per activity
+		tbodygyromeany	: Average of tbodygyromeany per subject per activity
+		tbodygyromeanz  : Average of tbodygyromeanz per subject per activity                  
+		tbodygyrostdx	: Average of tbodygyrostdx per subject per activity
+		tbodygyrostdy	: Average of tbodygyrostdy per subject per activity
+		tbodygyrostdz	: Average of tbodygyrostdz per subject per activity
+		tbodygyrojerkmeanx	: Average of tbodygyrojerkmeanx per subject per activity
+		tbodygyrojerkmeany	: Average of tbodygyrojerkmeany per subject per activity
+		tbodygyrojerkmeanz	: Average of tbodygyrojerkmeanz per subject per activity
+		tbodygyrojerkstdx	: Average of tbodygyrojerkstdx per subject per activity
+		tbodygyrojerkstdy	: Average of tbodygyrojerkstdy per subject per activity
+		tbodygyrojerkstdz	: Average of tbodygyrojerkstdz per subject per activity
+		tbodyaccmagmean	: Average of tbodyaccmagmean per subject per activity
+		tbodyaccmagstd	: Average of tbodyaccmagstd per subject per activity
+		tgravityaccmagmean	: Average of tgravityaccmagmean per subject per activity
+		tgravityaccmagstd	: Average of tgravityaccmagstd per subject per activity
+		tbodyaccjerkmagmean	: Average of tbodyaccjerkmagmean per subject per activity
+		tbodyaccjerkmagstd	: Average of tbodyaccjerkmagstd per subject per activity
+		tbodygyromagmean	: Average of tbodygyromagmean per subject per activity
+		tbodygyromagstd	: Average of tbodygyromagstd per subject per activity
+		tbodygyrojerkmagmean	: Average of tbodygyrojerkmagmean per subject per activity
+		tbodygyrojerkmagstd	: Average of tbodygyrojerkmagstd per subject per activity
+		fbodyaccmeanx	: Average of fbodyaccmeanx per subject per activity
+		fbodyaccmeany	: Average of fbodyaccmeany per subject per activity
+		fbodyaccmeanz	: Average of fbodyaccmeanz per subject per activity
+		fbodyaccstdx	: Average of fbodyaccstdx per subject per activity
+		fbodyaccstdy	: Average of fbodyaccstdy per subject per activity
+		fbodyaccstdz	: Average of fbodyaccstdz per subject per activity
+		fbodyaccmeanfreqx	: Average of fbodyaccmeanfreqx per subject per activity
+		fbodyaccmeanfreqy	: Average of fbodyaccmeanfreqy per subject per activity
+		fbodyaccmeanfreqz	: Average of fbodyaccmeanfreqz per subject per activity
+		fbodyaccjerkmeanx	: Average of fbodyaccjerkmeanx per subject per activity
+		fbodyaccjerkmeany	: Average of fbodyaccjerkmeany per subject per activity
+		fbodyaccjerkmeanz	: Average of fbodyaccjerkmeanz per subject per activity
+		fbodyaccjerkstdx	: Average of fbodyaccjerkstdx per subject per activity
+		fbodyaccjerkstdy	: Average of fbodyaccjerkstdy per subject per activity
+		fbodyaccjerkstdz	: Average of fbodyaccjerkstdz per subject per activity
+		fbodyaccjerkmeanfreqx	: Average of fbodyaccjerkmeanfreqx per subject per activity
+		fbodyaccjerkmeanfreqy	: Average of fbodyaccjerkmeanfreqy per subject per activity
+		fbodyaccjerkmeanfreqz	: Average of fbodyaccjerkmeanfreqz per subject per activity
+		fbodygyromeanx	: Average of fbodygyromeanx per subject per activity
+		fbodygyromeany	: Average of fbodygyromeany per subject per activity
+		fbodygyromeanz	: Average of fbodygyromeanz per subject per activity
+		fbodygyrostdx	: Average of fbodygyrostdx per subject per activity
+		fbodygyrostdy	: Average of fbodygyrostdy per subject per activity
+		fbodygyrostdz	: Average of fbodygyrostdz per subject per activity
+		fbodygyromeanfreqx	: Average of fbodygyromeanfreqx per subject per activity
+		fbodygyromeanfreqy	: Average of fbodygyromeanfreqy per subject per activity
+		fbodygyromeanfreqz	: Average of fbodygyromeanfreqz per subject per activity
+		fbodyaccmagmean	: Average of fbodyaccmagmean per subject per activity
+		fbodyaccmagstd	: Average of fbodyaccmagstd per subject per activity
+		fbodyaccmagmeanfreq	: Average of fbodyaccmagmeanfreq per subject per activity
+		fbodybodyaccjerkmagmean	: Average of fbodybodyaccjerkmagmean per subject per activity
+		fbodybodyaccjerkmagstd	: Average of fbodybodyaccjerkmagstd per subject per activity
+		fbodybodyaccjerkmagmeanfreq	: Average of fbodybodyaccjerkmagmeanfreq per subject per activity
+		fbodybodygyromagmean	: Average of fbodybodygyromagmean per subject per activity
+		fbodybodygyromagstd	: Average of fbodybodygyromagstd per subject per activity
+		fbodybodygyromagmeanfreq: Average of fbodybodygyromagmeanfreq per subject per activity
+		fbodybodygyrojerkmagmean	: Average of fbodybodygyrojerkmagmean per subject per activity
+		fbodybodygyrojerkmagstd	: Average of fbodybodygyrojerkmagstd per subject per activity
+		fbodybodygyrojerkmagmeanfreq	: Average of fbodybodygyrojerkmagmeanfreq per subject per activity
+		angletbodyaccmeangravity	: Average of angletbodyaccmeangravity per subject per activity
+		angletbodyaccjerkmeangravitymean	: Average of angletbodyaccjerkmeangravitymean per subject per activity
+		angletbodygyromeangravitymean	: Average of angletbodygyromeangravitymean per subject per activity
+		angletbodygyrojerkmeangravitymean	: Average of angletbodygyrojerkmeangravitymean per subject per activity
+		anglexgravitymean	: Average of anglexgravitymean per subject per activity
+		angleygravitymean	: Average of angleygravitymean per subject per activity
+		anglezgravitymean	: Average of anglezgravitymean per subject per activity
